@@ -40,18 +40,18 @@ export default function UserAuth() {
   if (user) {
     // 用户已登录，显示用户信息和退出按钮
     return (
-      <div className="flex items-center gap-3">
-        <div className="flex items-center gap-2 px-4 py-2 bg-white/20 text-white rounded-xl">
-          <User className="w-4 h-4" />
-          <span>{user.email}</span>
+      <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 px-3 py-1.5 bg-white/10 text-white rounded-lg text-sm">
+          <User className="w-3.5 h-3.5" />
+          <span className="max-w-[120px] truncate">{user.email}</span>
         </div>
         <form action={signOutAction}>
           <button 
             type="submit"
-            className="flex items-center gap-2 px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-xl transition-all duration-200"
+            className="flex items-center gap-1 px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-all duration-200 text-sm"
           >
-            <LogOut className="w-4 h-4" />
-            退出登录
+            <LogOut className="w-3.5 h-3.5" />
+            退出
           </button>
         </form>
       </div>
@@ -60,13 +60,13 @@ export default function UserAuth() {
 
   // 用户未登录，显示登录和注册按钮
   return (
-    <div className="flex gap-3">
-      <Link href="/sign-in" className="flex items-center gap-2 px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-xl transition-all duration-200">
-        <LogIn className="w-4 h-4" />
+    <div className="flex gap-2">
+      <Link href="/sign-in" className="flex items-center gap-1 px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-all duration-200 text-sm">
+        <LogIn className="w-3.5 h-3.5" />
         登录
       </Link>
-      <Link href="/sign-up" className="flex items-center gap-2 px-4 py-2 bg-white/20 hover:bg-white/30 text-white rounded-xl transition-all duration-200">
-        <UserPlus className="w-4 h-4" />
+      <Link href="/sign-up" className="flex items-center gap-1 px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-all duration-200 text-sm">
+        <UserPlus className="w-3.5 h-3.5" />
         注册
       </Link>
     </div>
